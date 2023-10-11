@@ -336,21 +336,7 @@ img {
 .footer .text-content {
   color: #f4f4fd;
 }
-.footer-btn {
-  display: flex;
-  align-self: end;
-  padding: 8px 24px;
-  gap: 8px;
-  border-radius: 4px;
-  background: #4d5ae5;
-  border: none;
-  margin-left: 24px;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
-}
+
 .footer-soc-media {
   color: #ffffff;
   font-style: normal;
@@ -382,30 +368,71 @@ footer .text-content {
   display: flex;
   flex-direction: column;
 }
-.footer-input {
-  width: 264px;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background-color: inherit;
-}
-.footer-input::placeholder {
-  color: #fff;
-  font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.48px;
-  padding-left: 16px;
-}
 .footer-icon {
   fill: #ffffff;
 }
 .subscr-footer {
   display: flex;
 }
+/*-----------------------------*/
+.subscr-text{
+   margin-bottom: 16px;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.5;
+   letter-spacing: 0.02em;
+   color: #ffffff; 
+
+}
+.modal-form{
+  display: flex; 
+  gap: 24px;
+}
+.footer-input {
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+ background-color: transparent; 
+ font-size: 12px;
+ line-height: 1.5; 
+ letter-spacing: 0.04em;
+ padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); 
+  border-radius: 4px;
+  color: #ffffff;
+}
+.footer-input::placeholder {
+  color: #ffffff;
+}
+.footer-btn {
+  display: flex;
+  align-self: end;
+  justify-content: center; 
+
+  padding: 8px 24px;
+  gap: 8px; 
+  
+
+
+
+  background-color: #4D5AE5;
+  border-radius: 4px; 
+   border: none; 
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  font-style: normal;
+ font-weight: 500;
+ line-height: 1.5; 
+ letter-spacing: 0.04em;
+}
+
+
+
+
+
 input,
 textarea,
 button {
