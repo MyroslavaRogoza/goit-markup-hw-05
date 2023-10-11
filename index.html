@@ -424,12 +424,30 @@
             </li>
           </ul>
         </div>
+        <div class="subscr-footer">
+          <div class="footer-input-cont">
+            <label for="footer-email" class="footer-soc-media">Subscribe</label>
+            <input
+              type="email"
+              class="footer-input"
+              id="footer-email"
+              name="footer-user-email"
+              placeholder="E-mail"
+            />
+          </div>
+          <button class="footer-btn">
+            Subscribe
+            <svg width="24" height="24" class="footer-icon">
+              <use href="./images/icons.svg#icon-Frame-3-1"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button type="button" class="modal-btn">
-          <svg width="8" height="8" class="modal-btn-icon modal-form-icon">
+          <svg width="8" height="8" class="modal-btn-icon">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
@@ -476,7 +494,7 @@
                 id="comment"
                 cols="30"
                 rows="10"
-                class="modal-input form-textarea form-label"
+                class="modal-input form-textarea"
                 placeholder="Text input"
               ></textarea>
             </div>
@@ -494,7 +512,7 @@
                   <use href="./images/icons.svg#icon-Vector-1"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
+              I accept the terms and conditions of the<span>&#160;</span>
               <a href="" class="checkbox-link">Privacy Policy</a></label
             >
           </div>

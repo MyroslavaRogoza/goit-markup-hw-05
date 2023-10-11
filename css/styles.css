@@ -116,7 +116,7 @@ img {
 }
 .header-contact-link:hover,
 .header-contact-link:focus,
-.header-contact-linkl:active {
+.header-contact-link:active {
   color: #404bbf;
 }
 .main-page-header {
@@ -336,11 +336,23 @@ img {
 .footer .text-content {
   color: #f4f4fd;
 }
-.footer .page-logo {
-  margin-right: 0;
+.footer-btn {
+  display: flex;
+  align-self: end;
+  padding: 8px 24px;
+  gap: 8px;
+  border-radius: 4px;
+  background: #4d5ae5;
+  border: none;
+  margin-left: 24px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
 }
 .footer-soc-media {
-  color: #fff;
+  color: #ffffff;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
@@ -358,12 +370,41 @@ footer .icon-link:focus {
 .footer-container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .logo-text-content {
   margin-right: 120px;
 }
 footer .text-content {
   margin-top: 16px;
+}
+.footer-input-cont {
+  display: flex;
+  flex-direction: column;
+}
+.footer-input {
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: inherit;
+}
+.footer-input::placeholder {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+  padding-left: 16px;
+}
+.footer-icon {
+  fill: #ffffff;
+}
+.subscr-footer {
+  display: flex;
 }
 input,
 textarea,
@@ -411,7 +452,23 @@ button {
   width: 24px;
   height: 24px;
   padding: 0;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-btn-icon {
+  fill: #2e2f42;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  fill: #ffffff;
+}
+
 .modal-title {
   color: #2e2f42;
   text-align: center;
@@ -449,12 +506,12 @@ button {
   position: absolute;
   display: block;
   fill: #2e2f42;
-  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  left: 16px;
 }
 .input-wrap {
   position: relative;
@@ -471,13 +528,20 @@ button {
 .form-textarea {
   height: 120px;
   resize: none;
-  padding: 16px;
+  padding-left: 16px;
+  padding-top: 8px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.48px;
 }
 .modal-field {
   margin-bottom: 8px;
 }
 .modal-field-textarea {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .is-open {
   opacity: 1;
@@ -517,4 +581,7 @@ button {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+.consert-cont {
+  margin-bottom: 24px;
 }
