@@ -348,6 +348,10 @@ img {
   gap: 16px;
   margin-top: 16px;
 }
+.modal-footer-form{
+  display: flex;
+  gap: 24px;
+}
 footer .icon-link:hover,
 footer .icon-link:focus {
   background-color: #31d0aa;
