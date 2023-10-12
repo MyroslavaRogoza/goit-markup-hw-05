@@ -356,7 +356,6 @@ footer .icon-link:focus {
 .footer-container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
 }
 .logo-text-content {
   margin-right: 120px;
@@ -373,20 +372,17 @@ footer .text-content {
 }
 .subscr-footer {
   display: flex;
-}
-/*-----------------------------*/
-.subscr-text{
-   margin-bottom: 16px;
-   font-weight: 500;
-   font-size: 16px;
-   line-height: 1.5;
-   letter-spacing: 0.02em;
-   color: #ffffff; 
-
-}
-.modal-form{
-  display: flex; 
+  flex-direction: row;
+  margin-left: 80px;
   gap: 24px;
+}
+.subscr-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 .footer-input {
   width: 264px;
@@ -394,12 +390,12 @@ footer .text-content {
   border-radius: 4px;
   border: 1px solid #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
- background-color: transparent; 
- font-size: 12px;
- line-height: 1.5; 
- letter-spacing: 0.04em;
- padding-left: 16px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); 
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: #ffffff;
 }
@@ -408,31 +404,23 @@ footer .text-content {
 }
 .footer-btn {
   display: flex;
-  align-self: end;
-  justify-content: center; 
-
+  justify-content: center;
   padding: 8px 24px;
-  gap: 8px; 
-  
-
-
-
-  background-color: #4D5AE5;
-  border-radius: 4px; 
-   border: none; 
+  gap: 8px;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  border: none;
   cursor: pointer;
   color: #ffffff;
   font-size: 16px;
   font-style: normal;
- font-weight: 500;
- line-height: 1.5; 
- letter-spacing: 0.04em;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
-
-
-
-
-
+.footer-btn-container {
+  align-self: end;
+}
 input,
 textarea,
 button {
@@ -446,6 +434,9 @@ button {
   top: 0;
   left: 0;
   background-color: rgba(46, 47, 66, 0.4);
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -463,6 +454,9 @@ button {
   padding-right: 24px;
   padding-left: 24px;
   padding-bottom: 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn {
   display: flex;
@@ -479,12 +473,17 @@ button {
   width: 24px;
   height: 24px;
   padding: 0;
-  transition-property: background-color, fill;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .modal-btn-icon {
   fill: #2e2f42;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -495,7 +494,6 @@ button {
 .modal-btn:focus .modal-btn-icon {
   fill: #ffffff;
 }
-
 .modal-title {
   color: #2e2f42;
   text-align: center;
@@ -520,14 +518,17 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-label {
-  display: inline-block;
-  margin-bottom: 4px;
+  display: block;
   color: #8e8f99;
   font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 1.17;
   letter-spacing: 0.48px;
+}
+.modal-field > label,
+.modal-field-textarea > label {
+  margin-bottom: 4px;
 }
 .modal-form-icon {
   position: absolute;
@@ -553,16 +554,27 @@ button {
   color: rgba(46, 47, 66, 0.4);
 }
 .form-textarea {
+  width: 100%;
   height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
   resize: none;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  height: 120px;
   padding-left: 16px;
   padding-top: 8px;
-  font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.16;
-  letter-spacing: 0.48px;
+}
+.form-textarea:focus-within {
+  border-color: #4d5ae5;
 }
 .modal-field {
   margin-bottom: 8px;
@@ -577,33 +589,39 @@ button {
 }
 .checkbox-link {
   color: #4d5ae5;
-  font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.48px;
   text-decoration-line: underline;
+  display: inline-block;
 }
 .consert-box {
-  display: block;
+  display: inline-flex;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
   border-radius: 2px;
   width: 16px;
   height: 16px;
-  transition-property: background-color, border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   justify-content: center;
   fill: transparent;
+  color: #8e8f99;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
 }
-.consert-label {
+/* .consert-label {
   display: flex;
   align-items: center;
-}
+  margin-bottom: 0;
+} */
 .input-check:checked + .consert-label > .consert-box {
   background-color: #404bbf;
   border: none;
