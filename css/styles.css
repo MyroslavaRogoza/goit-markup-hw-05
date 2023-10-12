@@ -336,18 +336,17 @@ img {
 .footer .text-content {
   color: #f4f4fd;
 }
-
 .footer-soc-media {
   color: #ffffff;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.32px;
-  margin-bottom: 16px;
 }
 .footer-icon-container {
   display: flex;
   gap: 16px;
+  margin-top: 16px;
 }
 footer .icon-link:hover,
 footer .icon-link:focus {
@@ -372,9 +371,8 @@ footer .text-content {
 }
 .subscr-footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-left: 80px;
-  gap: 24px;
 }
 .subscr-text {
   margin-bottom: 16px;
@@ -418,8 +416,9 @@ footer .text-content {
   line-height: 1.5;
   letter-spacing: 0.04em;
 }
-.footer-btn-container {
-  align-self: end;
+.modal-form {
+  display: flex;
+ gap: 24px;
 }
 input,
 textarea,
@@ -596,7 +595,6 @@ button {
   letter-spacing: 0.48px;
   text-decoration-line: underline;
   display: inline-block;
-
 }
 .consert-box {
   display: inline-flex;
